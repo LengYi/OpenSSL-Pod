@@ -23,7 +23,14 @@ Pod::Spec.new do |s|
     mkdir -p "${CURRENTPATH}"
     mkdir -p "${CURRENTPATH}/bin"
 
-    cp "file.tgz" "${CURRENTPATH}/file.tgz"
+    # Cocoapods no longer seems to leave the source file
+    # in the Pod directory as this script expects, so we
+    # download it again here.
+
+    echo "Downloading source..."
+
+    curl https://www.openssl.org/source/old/1.0.2/openssl-1.0.2l.tar.gz --output "${CURRENTPATH}/file.tgz"
+
     cd "${CURRENTPATH}"
     tar -xzf file.tgz
     cd "openssl-${VERSION}"
