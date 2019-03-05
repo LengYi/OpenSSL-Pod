@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name            = "OpenSSL"
+  s.name            = "VVOpenSSL"
   s.version         = "1.0.222"
   s.summary         = "OpenSSL is an SSL/TLS and Crypto toolkit. Deprecated in Mac OS and gone in iOS, this spec gives your project non-deprecated OpenSSL support."
   s.author          = "OpenSSL Project <openssl-dev@openssl.org>"
